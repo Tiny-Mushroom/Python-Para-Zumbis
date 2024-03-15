@@ -1,0 +1,62 @@
+numberA = int (input("Digite o primeiro numero: "))
+numberB = int (input("Digite o segundo numer: "))
+print(f"A soma destes dois numeros é: {numberA + numberB}")
+
+
+comprimento = int (input("digite o valor em metros: "))
+print(f'Este comprimento em milímetros é: {comprimento * 1000}mm')
+
+
+tempoD = int (input('Digite o tempo em Dias: '))
+tempoH = int (input('Digite o tempo em horas: '))
+tempoM = int (input('Digite o tempo em minutos: '))
+tempoS = int (input('Digite o tempo em segundo: '))
+if tempoD > 0:
+    tempoD = tempoD * 86400
+if tempoH > 0:
+    tempoH = tempoH * 3600
+if tempoM > 0:
+    tempoM = tempoM * 60
+print(f'tempo total em segundos: {tempoD + tempoH + tempoM + tempoS}')
+
+
+salario = int (input('Seu salario atual: '))
+porcentagem = int (input('Porcentagem de aumento: '))
+porcentagem = porcentagem / 100
+print(f'Seu salario atual é: {salario + (salario * porcentagem)}')
+
+
+preco = int (input('preço da mercadoria: '))
+porcentagem = int (input('Porcentagem de desconto: '))
+porcentagem = porcentagem / 100
+print(f'O preço da mercadoria com desconto é: {preco - (preco * porcentagem)}')
+
+
+distancia = int (input('Qual a distancia a percorrer em metros por segundo? '))
+velocidade = int (input('qual é a velocidade media do percurço em metros? '))
+print(f'O tempo do percurso é: {distancia / velocidade}')
+
+
+temperaturaC = int (input('Qual é a temperatura em celcius? '))
+print(f'A temperatura em Fahrenheit é: {(9 * ( temperaturaC / 5)) + 32}')
+
+
+temperaturaF = int (input('Qual é a temperatura em Fahrenheit? '))
+print(f'A temperatura em Celcius é: {((temperaturaF - 32) * 5) / 9}')
+
+
+tempo = int (input('quantos dias você esta com o carro? '))
+distancia = int (input('quantos kilometros foram rodados? '))
+print(f'O preço a pagar é: {(60 * tempo) + (distancia * 0.15)}')
+
+
+tempo = int (input('quantos dias você esta com o carro? '))
+distancia = int (input('quantos kilometros foram rodados? '))
+print(f'O preço a pagar é: {(60 * tempo) + (distancia * 0.15)}')
+
+
+numbA = int (input('defina a base: '))
+numbB = int (input('defina a potencia: '))
+numb = numbA ** numbB
+numb = str(numb)
+print(f'há {len(numb)} digitos no resultado')
