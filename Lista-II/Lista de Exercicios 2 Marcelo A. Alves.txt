@@ -1,0 +1,84 @@
+print("Digite os numeros do MAIOR para o MENOR.")
+a = int (input("Digite o comprimento do primeiro lado: "))
+b = int (input("Digite o comprimento do segundo lado: "))
+c = int (input("Digite o terceiro lado: "))
+
+if (a + b) > c and (a + c) > b and (b + c) > a and a == b == c:
+    print("Este triângulo é eequilatero.")
+elif (a + b) > c(a + b) > c and (a + c) > b and (b + c) > a and a == b != c:
+    print("Este triângulo é isóceles.")
+elif (a + b) > c and (a + c) > b and (b + c) > a and a > b > c:
+    print("este triangulo é escaleno.")
+else:
+    print("Estes lados não formam um triângulo.")
+
+
+
+def isleap(year):
+    return year % 4 == 0 and (year % 100 != 0 or year % 400 == 0)
+
+year = int (input("Digite o ano: "))
+
+leapYear = isleap(year)
+
+if leapYear:
+    print("É ano bisexto.")
+else:
+    print("Não é ano bisexto")
+
+
+
+excesso = 0
+multa = 0
+
+peso = float (input("Digite o peso do peixe em quilos: "))
+
+if peso > 50:
+    excesso = peso - 50
+    multa = excesso * 4.00
+
+print(f'Excesso: {excesso}kg. Multa: R${multa}')
+
+
+
+a = int (input('Valor a: '))
+b = int (input('Valor b: '))
+c = int (input('Valor c: '))
+
+maior = max(a, b, c)
+print('O maior valor é: ', maior)
+
+
+
+a = int (input('Valor a: '))
+b = int (input('Valor b: '))
+c = int (input('Valor c: '))
+
+maior = max(a, b, c)
+menor = min(a, b, c)
+print('O maior valor é: ', maior)
+print('O menor valor é: ', menor)
+
+
+
+salario = float (input('Quanto você ganha por hora? '))
+tempo = int (input('Quantas horas você trabalha por mes? '))
+bruto = salario * tempo
+imposto = bruto * (11 / 100)
+inss = bruto * (8 / 100)
+sindicato = bruto * (5 / 100)
+liquido = bruto - imposto - inss - sindicato
+
+print('+ Salário bruto: R$', bruto)
+print('- IR(11%):  R$', imposto)
+print('- INSS(8%): R$', inss)
+print('- Sindicato(5%); R$', sindicato)
+print('= Salário Líquido: R$', liquido)
+
+
+
+area = float (input("Qual o tamanho da area a ser pintada? "))
+volume = float (area / 3)
+latas = int (round(volume / 18))
+preco = latas * 80.00
+print(f"Você deverá comprar {latas} latas. O preço total será de R${preco}")
