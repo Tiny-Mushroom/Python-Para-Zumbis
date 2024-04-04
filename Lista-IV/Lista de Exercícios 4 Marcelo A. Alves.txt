@@ -1,0 +1,91 @@
+import random
+randint = random.sample(range(1, 101), 10)
+print("sample:", randint)
+
+maxint = 0
+minint = 101
+
+for i in randint:
+    if i > maxint:
+        maxint = i
+    if i < minint:
+        minint = i
+print("Max:", maxint)
+print("Min:", minint)
+
+
+import random
+
+randint = random.sample(range(1, 101), 20)
+
+evenint = []
+oddint = []
+
+for i in randint:
+    if i % 2 == 0:
+        evenint.append(i)
+    if i % 2 != 0:
+        oddint.append(i)
+
+print("sample:", randint)
+print("Even:", evenint)
+print("Odd:", oddint)
+
+
+import random
+
+vectin1 = random.sample(range(1, 101), 10)
+vectin2 = random.sample(range(1, 101), 10)
+vectout = []
+cnt = 0
+
+print("Input 1:", vectin1)
+print("input 2:", vectin2)
+
+while cnt < 10:
+    vectout.append(vectin1[cnt])
+    vectout.append(vectin2[cnt])
+    cnt = cnt + 1
+
+print("Output:", vectout)
+
+
+
+textinput = '''The Python Software Foundation and the global Python
+community welcome and encourage participation by everyone. Our community is based on
+mutual respect, tolerance, and encouragement, and we are working to help each other live up
+to these principles. We want our community to be more diverse: whoever you are, and
+whatever your background, we welcome you.'''
+print("Original:", textinput)
+
+textinput = textinput.lower().strip(".,:;?!").split()
+print("Edited:", textinput)
+textout = []
+
+for word in textinput:
+    if word.startswith(('p', 'y', 't', 'h')) or word.endswith(('p', 'y', 't', 'h')):
+        textout.append(word)
+
+textout = list(set(textout))
+
+print("Words that start or end with one of the letters of python:", textout)
+
+
+textinput = '''The Python Software Foundation and the global Python
+community welcome and encourage participation by everyone. Our community is based on
+mutual respect, tolerance, and encouragement, and we are working to help each other live up
+to these principles. We want our community to be more diverse: whoever you are, and
+whatever your background, we welcome you.'''
+print('Original:', textinput)
+
+textinput = textinput.lower().strip('.,:;?!').split()
+print('Edited:', textinput)
+textout = []
+
+for word in textinput:
+    if len(word) > 4 and any(letter in word for letter in 'python'):
+        textout.append(word)
+
+textout = list(set(textout))
+
+print('Larger than 4 characters word that contains one of the letters of "Python":', textout)
